@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-accent: var(--font-cormorant), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: #FAF6F0;
+  --color-gold: #B8963E;
+  --color-sage: #4A5C4E;
+  --color-charcoal: #2C1F14;
+  --color-burgundy: #7A2D3A;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  scroll-behavior: smooth;
+  @apply font-sans antialiased;
+}
+
+@layer components {
+  .border-gold {
+    border: 1px solid var(--color-gold);
+  }
+
+  .btn-gold {
+    background-color: var(--color-gold);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  .btn-gold:hover {
+    background-color: var(--color-burgundy);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-gold);
+    color: white;
+  }
+
+  .ornament-divider {
+    width: 150px;
+    height: 40px;
+    margin: 2rem auto;
+    color: var(--color-gold);
+  }
+
+  .nav-link {
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-gold);
+    transition: width 0.3s;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
 }

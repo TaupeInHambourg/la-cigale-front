@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>La Cigale | Brasserie Historique Art Nouveau à Nantes</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&amp;family=Lato:wght@300;400;700&amp;family=Playfair+Display:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cream': '#FAF6F0',
+            'gold': '#B8963E',
+            'sage': '#4A5C4E',
+            'charcoal': '#2C1F14',
+            'burgundy': '#7A2D3A',
+          },
+          fontFamily: {
+            'serif': ['Playfair Display', 'serif'],
+            'sans': ['Lato', 'sans-serif'],
+            'accent': ['Cormorant Garamond', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layouts">
+    body {
+      background-color: #FAF6F0;
+      color: #2C1F14;
+      scroll-behavior: smooth;
+    }
+
+    .border-gold {
+      border: 1px solid #B8963E;
+    }
+
+    .btn-gold {
+      background-color: #B8963E;
+      color: white;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    .btn-gold:hover {
+      background-color: #7A2D3A;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #B8963E;
+      color: #B8963E;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background-color: #B8963E;
+      color: white;
+    }
+
+    .placeholder-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e5e7eb;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* Art Nouveau Divider Ornament */
+    .ornament-divider {
+      width: 150px;
+      height: 40px;
+      margin: 2rem auto;
+      color: #B8963E;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: #B8963E;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 3rem !important; }
+    }
+  </style>
+</head>
+<body class="font-sans">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 bg-cream/95 backdrop-blur-sm z-50 border-b border-gold/20">
+<div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+<!-- Logo -->
+<a class="font-serif text-3xl font-bold tracking-tight text-charcoal" href="/">
+        La Cigale
+      </a>
+<!-- Desktop Navigation -->
+<nav class="hidden lg:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest text-charcoal">
+<a class="nav-link" href="#">La Brasserie</a>
+<a class="nav-link" href="#">Les Cartes</a>
+<a class="nav-link" href="#">Spectacles</a>
+<a class="nav-link" href="#">Boutique</a>
+<a class="nav-link" href="#">Carte Cadeau</a>
+</nav>
+<!-- CTA & Phone -->
+<div class="flex items-center space-x-6">
+<a class="hidden md:block text-xs font-bold tracking-tighter text-gold" href="tel:+33251849494">
+          +33 (0)2 51 84 94 94
+        </a>
+<button class="btn-gold px-6 py-3 text-xs">
+          Réserver une table
+        </button>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main class="pt-20">
+<!-- BEGIN: HeroSection -->
+<section class="relative h-[calc(100vh-80px)] min-h-[600px] flex items-center justify-center overflow-hidden">
+<!-- Background Placeholder -->
+<div class="absolute inset-0 z-0">
+<img alt="Salle principale Art Nouveau" class="w-full h-full object-cover" src="{{DATA:IMAGE:IMAGE_4}}"/>
+<div class="absolute inset-0 bg-charcoal/40"></div>
+</div>
+<!-- Content Overlay -->
+<div class="relative z-10 text-center max-w-4xl px-6">
+<h1 class="hero-title font-serif text-6xl md:text-8xl mb-6 leading-tight text-white">L'Eveil des Sens <br/> depuis 1895</h1>
+<p class="font-accent text-2xl md:text-3xl mb-10 italic text-white/90">L'Eveil des Sens <br/> depuis 1895</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="btn-gold px-10 py-4 text-sm">Réserver</button>
+<button class="btn-outline px-10 py-4 text-sm bg-white/50 backdrop-blur-sm">Découvrir la Brasserie</button>
+</div>
+</div>
+<!-- Scroll Indicator Ornament -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</svg>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: EditorialBanner -->
+<section class="py-24 bg-cream text-center px-6 border-y border-gold/10">
+<div class="max-w-3xl mx-auto">
+<!-- Ornament -->
+<div class="ornament-divider">
+<svg fill="currentColor" viewbox="0 0 100 20">
+<path d="M0 10 Q25 0 50 10 T100 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+<circle cx="50" cy="10" r="1.5"></circle>
+<path d="M40 10 Q50 5 60 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</svg>
+</div>
+<h2 class="font-accent text-3xl md:text-5xl text-charcoal italic leading-relaxed">
+          « Peut-être la plus belle <br/> Brasserie du monde »
+        </h2>
+<!-- Ornament -->
+<div class="ornament-divider scale-y-[-1]">
+<svg fill="currentColor" viewbox="0 0 100 20">
+<path d="M0 10 Q25 0 50 10 T100 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+<circle cx="50" cy="10" r="1.5"></circle>
+<path d="M40 10 Q50 5 60 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- END: EditorialBanner -->
+<!-- BEGIN: HistoryIdentity -->
+<section class="py-24 px-4 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 space-y-8">
+<span class="text-gold font-bold tracking-widest text-xs uppercase">Monument Historique</span>
+<h2 class="font-serif text-4xl md:text-5xl text-charcoal">Un Héritage Signé <br/>Émile Libaudière</h2>
+<div class="w-20 h-px bg-gold"></div>
+<p class="text-lg text-charcoal/80 leading-relaxed font-light">
+            Inaugurée en 1895, La Cigale est le chef-d’œuvre de l’architecte-céramiste Émile Libaudière. Ses murs, ornés de faïences et de sculptures, racontent une époque où l'art de vivre à la française atteignait son apogée. 
+          </p>
+<p class="text-lg text-charcoal/80 leading-relaxed font-light">
+            Classée Monument Historique depuis 1964, elle continue d'émerveiller les voyageurs et les Nantais par son décor théâtral et sa gastronomie authentique.
+          </p>
+<a class="inline-block text-gold font-bold uppercase tracking-widest text-xs border-b border-gold pb-1 hover:text-burgundy hover:border-burgundy transition-colors" href="#">
+            Explorer notre histoire
+          </a>
+</div>
+<div class="order-1 lg:order-2 h-[600px] bg-sage/10 relative">
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="w-full h-full border-gold p-4">
+<img alt="Détail architectural céramique" class="w-full h-full object-cover" src="{{DATA:IMAGE:IMAGE_13}}"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HistoryIdentity -->
+<!-- BEGIN: Menus -->
+<section class="py-24 bg-white/50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="font-serif text-4xl text-charcoal">Les Cartes</h2>
+<p class="font-accent text-xl italic text-gold mt-2">Le goût de l'excellence à toute heure</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Petit Déjeuner -->
+<div class="group" data-purpose="menu-card">
+<div class="aspect-[3/4] bg-cream mb-6 overflow-hidden border border-gold/10">
+<img alt="Petit Déjeuner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="{{DATA:IMAGE:IMAGE_5}}"/>
+</div>
+<h3 class="font-serif text-xl mb-2">Petit Déjeuner</h3>
+<p class="text-sm text-charcoal/60 mb-4 h-12">Commencez la journée sous les ors de la salle principale.</p>
+<a class="text-xs font-bold uppercase tracking-widest text-gold group-hover:text-burgundy transition-colors" href="#">Voir la carte</a>
+</div>
+<!-- Déjeuner -->
+<div class="group" data-purpose="menu-card">
+<div class="aspect-[3/4] bg-cream mb-6 overflow-hidden border border-gold/10">
+<img alt="Déjeuner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="{{DATA:IMAGE:IMAGE_12}}"/>
+</div>
+<h3 class="font-serif text-xl mb-2">Déjeuner</h3>
+<p class="text-sm text-charcoal/60 mb-4 h-12">Le ballet des serveurs pour une escale gourmande et efficace.</p>
+<a class="text-xs font-bold uppercase tracking-widest text-gold group-hover:text-burgundy transition-colors" href="#">Voir la carte</a>
+</div>
+<!-- Salon de Thé -->
+<div class="group" data-purpose="menu-card">
+<div class="aspect-[3/4] bg-cream mb-6 overflow-hidden border border-gold/10">
+<img alt="Salon de Thé" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="{{DATA:IMAGE:IMAGE_6}}"/>
+</div>
+<h3 class="font-serif text-xl mb-2">Salon de Thé</h3>
+<p class="text-sm text-charcoal/60 mb-4 h-12">Pâtisseries maison et thés fins dans une atmosphère feutrée.</p>
+<a class="text-xs font-bold uppercase tracking-widest text-gold group-hover:text-burgundy transition-colors" href="#">Voir la carte</a>
+</div>
+<!-- Dîner -->
+<div class="group" data-purpose="menu-card">
+<div class="aspect-[3/4] bg-cream mb-6 overflow-hidden border border-gold/10">
+<img alt="Dîner &amp; Souper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="{{DATA:IMAGE:IMAGE_10}}"/>
+</div>
+<h3 class="font-serif text-xl mb-2">Dîner &amp; Souper</h3>
+<p class="text-sm text-charcoal/60 mb-4 h-12">L'élégance du soir et les saveurs des produits de la mer.</p>
+<a class="text-xs font-bold uppercase tracking-widest text-gold group-hover:text-burgundy transition-colors" href="#">Voir la carte</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Menus -->
+<!-- BEGIN: CulturalLife -->
+<section class="relative h-[500px] flex items-center justify-center text-white text-center">
+<div class="absolute inset-0 bg-charcoal/40 z-10"></div>
+<!-- Background Placeholder -->
+<div class="absolute inset-0 z-0">
+<img alt="Spectacle ou atmosphère culturelle" class="w-full h-full object-cover" src="{{DATA:IMAGE:IMAGE_8}}"/>
+<div class="absolute inset-0 bg-charcoal/60"></div>
+</div>
+<div class="relative z-20 max-w-2xl px-6">
+<h2 class="font-serif text-4xl md:text-5xl mb-6">La Vie Culturelle</h2>
+<p class="text-lg mb-10 font-light leading-relaxed">
+          Théâtre, musique et poésie se rencontrent régulièrement entre nos murs pour faire vivre l'âme artistique de Nantes.
+        </p>
+<button class="btn-gold px-10 py-4 text-sm border-none">Découvrir les spectacles</button>
+</div>
+</section>
+<!-- END: CulturalLife -->
+<!-- BEGIN: Salons -->
+<section class="py-24 px-4 max-w-5xl mx-auto text-center">
+<div class="space-y-8">
+<h2 class="font-serif text-4xl text-charcoal">Les Salons Privés</h2>
+<div class="aspect-video bg-cream border border-gold/10 mb-8 overflow-hidden">
+<img alt="Salon privatisé" class="w-full h-full object-cover" src="{{DATA:IMAGE:IMAGE_7}}"/>
+</div>
+<p class="text-lg text-charcoal/80 max-w-2xl mx-auto font-light">
+          Pour vos événements professionnels ou familiaux, La Cigale met à votre disposition ses salons d’exception alliant discrétion et prestige.
+        </p>
+<button class="btn-outline px-10 py-4 text-sm mt-4">Nous contacter</button>
+</div>
+</section>
+<!-- END: Salons -->
+<!-- BEGIN: Shop -->
+<section class="grid grid-cols-1 md:grid-cols-2">
+<!-- Boutique -->
+<div class="relative group h-[500px] flex items-center justify-center overflow-hidden border-r border-gold/10">
+<div class="absolute inset-0 bg-gold/5 group-hover:bg-gold/10 transition-colors duration-500"></div>
+<img alt="Produits Boutique" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="{{DATA:IMAGE:IMAGE_9}}"/>
+<div class="relative z-10 text-center px-12">
+<h2 class="font-serif text-3xl mb-4">La Boutique</h2>
+<p class="text-sm text-charcoal/70 mb-8 max-w-xs mx-auto">Emportez un morceau de l'histoire chez vous avec nos produits exclusifs.</p>
+<a class="btn-gold px-8 py-3 text-xs inline-block" href="#">Découvrir la boutique</a>
+</div>
+</div>
+<!-- Carte Cadeau -->
+<div class="relative group h-[500px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-burgundy/5 group-hover:bg-burgundy/10 transition-colors duration-500"></div>
+<img alt="Carte Cadeau" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="{{DATA:IMAGE:IMAGE_11}}"/>
+<div class="relative z-10 text-center px-12">
+<h2 class="font-serif text-3xl mb-4">Carte Cadeau</h2>
+<p class="text-sm text-charcoal/70 mb-8 max-w-xs mx-auto">Offrez une expérience inoubliable au sein de notre monument historique.</p>
+<a class="btn-gold px-8 py-3 text-xs inline-block" href="#">Offrir un coffret</a>
+</div>
+</div>
+</section>
+<!-- END: Shop -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-charcoal text-cream py-20 px-4">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<!-- Brand -->
+<div class="space-y-6">
+<span class="font-serif text-3xl">La Cigale</span>
+<p class="text-cream/50 text-sm leading-relaxed">
+            Une institution Nantaise depuis 1895. <br/>
+            Service continu tous les jours.
+          </p>
+</div>
+<!-- Contact -->
+<div class="space-y-6">
+<h4 class="font-bold text-xs uppercase tracking-widest text-gold">Coordonnées</h4>
+<address class="not-italic text-sm text-cream/70 space-y-2">
+<p>4 Place Graslin</p>
+<p>44000 Nantes, France</p>
+<p class="pt-4"><a class="hover:text-gold" href="tel:+33251849494">+33 (0)2 51 84 94 94</a></p>
+</address>
+</div>
+<!-- Navigation -->
+<div class="space-y-6">
+<h4 class="font-bold text-xs uppercase tracking-widest text-gold">Liens Utiles</h4>
+<nav class="flex flex-col space-y-3 text-sm text-cream/70">
+<a class="hover:text-gold" href="#">Recrutement</a>
+<a class="hover:text-gold" href="#">Presse</a>
+<a class="hover:text-gold" href="#">Mentions Légales</a>
+<a class="hover:text-gold" href="#">Confidentialité</a>
+</nav>
+</div>
+<!-- Social -->
+<div class="space-y-6">
+<h4 class="font-bold text-xs uppercase tracking-widest text-gold">Suivez-nous</h4>
+<div class="flex space-x-6">
+<a class="hover:text-gold transition-colors" href="#">Facebook</a>
+<a class="hover:text-gold transition-colors" href="#">Instagram</a>
+<a class="hover:text-gold transition-colors" href="#">YouTube</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-white/10 text-center text-xs text-cream/30 uppercase tracking-[0.2em]">
+        © 2023 La Cigale Nantes — Brasserie Historique
+      </div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>
